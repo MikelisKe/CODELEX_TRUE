@@ -26,6 +26,5 @@ internal class Program
         Console.WriteLine($"And some of the {Math.Round(distanceMiles, 2)} miles distance");
         Console.WriteLine($"He realized that in USA it is {Math.Round(mph,8)} miles per hour and there was some tutoise who swam faster");
         Console.WriteLine("The end!");
-
     }
 }

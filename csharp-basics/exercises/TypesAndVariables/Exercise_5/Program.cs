@@ -21,10 +21,10 @@ internal class Program
         {
             sym += "-";
         }
-        Console.WriteLine("+" + sym + "+"); //38
+
+        Console.WriteLine("+" + sym + "+");
         Console.WriteLine(line1);
         Console.WriteLine(line2);
         Console.WriteLine("+" + sym + "+");
-
     }
 }

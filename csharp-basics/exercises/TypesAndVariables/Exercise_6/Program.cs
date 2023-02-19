@@ -12,8 +12,6 @@
         double num4 = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine("sum: " + (num1 + num2 + num3 + num4));
-
         Console.ReadKey();
-
     }
 }

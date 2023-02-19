@@ -23,10 +23,8 @@ namespace MoreVariablesAndPrinting
             Console.WriteLine("Actually, that's not too heavy.");
             Console.WriteLine("He's got " + eyes + " eyes and " + hair + " hair.");
             Console.WriteLine("His teeth are usually " + teeth + " depending on the coffee.");
-
             Console.WriteLine("If I add " + age + ", " + height + ", and " + weight
                                + " I get " + (age + height + weight) + ".");
-
             Console.ReadKey();
         }
     }
