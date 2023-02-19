@@ -8,7 +8,8 @@
         if (num == devider|| num % devider ==0)
         {
             Console.WriteLine(true);
-        }                
+        }
+                
         
         Console.ReadKey();
     }
