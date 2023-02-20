@@ -2,16 +2,20 @@
 {
     private static void Main(string[] args)
     {
+        Console.WriteLine("Choose some normal number:");
         CheckOddEven();
+        Console.WriteLine("Bye");
 
         static void CheckOddEven()
         {
-            for (var i = 1 ; i < 10; i++)
+            int num = Convert.ToInt32( Console.ReadLine());
+            if (num % 2 == 0 )
             {
-                if (i%2 == 1)
-                {
-                    Console.WriteLine("bye");
-                }
+                Console.WriteLine($"This number: {num} is even");
+            }
+            else
+            {
+                Console.WriteLine($"This number: {num} is odd");
             }
         }
 
