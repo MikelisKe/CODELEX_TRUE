@@ -6,7 +6,7 @@ namespace Exercise1
     {
         static void Main(string[] args)
         {
-            int i;        
+            int i;         
             Console.WriteLine("The first 10 natural numbers are: ");
 
             for (i = 1; i < 11; i++)
