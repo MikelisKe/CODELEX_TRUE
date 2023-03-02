@@ -13,6 +13,7 @@ namespace Exercise1
             {
                 Console.WriteLine(i);
             }
+
             Console.ReadKey();
         }
     }
