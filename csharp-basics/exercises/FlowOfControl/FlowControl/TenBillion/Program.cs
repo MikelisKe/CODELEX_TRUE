@@ -6,7 +6,6 @@ namespace TenBillion
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Input an integer number less than ten billion: ");
             var input = long.Parse(Console.ReadLine());
             long bil = 10000000000;
@@ -69,6 +68,7 @@ namespace TenBillion
             {
                 Console.WriteLine("The number is not a long");
             }
+
             Console.ReadKey();
         }
     }
