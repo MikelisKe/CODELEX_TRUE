@@ -16,6 +16,7 @@ internal class Program
         {
             Console.Write($"{num[i]} ");
         }
+
         Console.WriteLine();
         Console.Write("Select the number from 1 to 20 to know its index: ");
         int index = int.Parse(Console.ReadLine());
@@ -26,8 +27,6 @@ internal class Program
             {
                 Console.WriteLine($"The index or number {index} is {i} ");
             }            
-        }
-
-        
+        }        
     }
 }
