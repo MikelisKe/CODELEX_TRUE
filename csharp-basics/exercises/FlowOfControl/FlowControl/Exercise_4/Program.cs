@@ -41,6 +41,7 @@
             }
         }
     }
+
     static void Case()
     {
         Console.WriteLine("Input number from 0 to 6 to know the day");
@@ -64,12 +65,10 @@
             }
         }
     }
-    private static void Main(string[] args)
-    {
-        
-        NestedIf();
-        Case();
 
-        
+    private static void Main(string[] args)
+    {        
+        NestedIf();
+        Case();        
     }
 }
