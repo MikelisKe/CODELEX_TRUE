@@ -10,17 +10,20 @@ namespace CalculateArea
     {
         public static double AreaOfCircle(decimal radius)
         {
-            throw new NotImplementedException();
+            double area = Math.PI * Convert.ToDouble(radius) * 2;
+            return area;
         }
 
         public static double AreaOfRectangle(decimal length, decimal width)
         {
-            throw new NotImplementedException();
+            double areaRec = (double)(length * width);
+            return areaRec;
         }
 
         public static double AreaOfTriangle(decimal ground, decimal h)
         {
-            throw new NotImplementedException();
+            double areaTri = (double)(ground * h) * (double)0.5;
+            return areaTri ;
         }
     }
 }
