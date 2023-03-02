@@ -2,7 +2,8 @@
 {
     private static void Main(string[] args)
     {
-        ReverseTheCase("ZirgA AsTiTe");
+        Console.WriteLine(ReverseTheCase("ZirgA AsTiTe"));
+        
         static string ReverseTheCase(string input)
         {
             string result = "";
@@ -20,7 +21,6 @@
                 }
                 result = result + chars[i];
             }
-
 
             return result;
         }
