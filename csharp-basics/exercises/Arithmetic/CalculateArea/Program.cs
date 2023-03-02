@@ -15,8 +15,7 @@ namespace CalculateArea
         }
 
         public static string GetMenu()
-        {          
-            
+        {                      
             Console.WriteLine("Geometry Calculator\n");
             Console.WriteLine("1. Calculate the Area of a Circle");
             Console.WriteLine("2. Calculate the Area of a Rectangle");
@@ -35,22 +34,19 @@ namespace CalculateArea
                 case '3':
                     CalculateTriangleArea();
                     return keyboard.KeyChar.ToString();
-                case '4':
-                    break;
+                default: 
+                    return "invalid output";
             }
-            return "invalid output";                   
         }
 
         public static void CalculateCircleArea()
-        {
-            
+        {            
             decimal radius = 0;
             Console.WriteLine("What is the circle's radius? ");
            
             radius = decimal.Parse(Console.ReadLine());                      
             Console.WriteLine($"The circle's area is "
                     + Geometry.AreaOfCircle(radius));
-
         }
 
         public static void CalculateRectangleArea()
@@ -62,8 +58,7 @@ namespace CalculateArea
             Console.WriteLine("Enter width? ");            
             width = decimal.Parse(Console.ReadLine());            
             double rectArea = Geometry.AreaOfRectangle( length, width);
-            Console.WriteLine($"The rectangle's area is {rectArea}");
-                           
+            Console.WriteLine($"The rectangle's area is {rectArea}");                           
         }
 
         public static void CalculateTriangleArea()
