@@ -4,13 +4,11 @@ using System.Security.Cryptography.X509Certificates;
 internal class Program
 {
     private static void Main(string[] args)
-    {
-        
+    {        
         Console.WriteLine("Input word to get it into your Nokia 3310");
         var text = Console.ReadLine();
         string textLower = text.ToLower();
-        int pad;
-        
+        int pad;        
 
         if (textLower == null)
         {
@@ -41,9 +39,7 @@ internal class Program
                     case 't': case 'u': case 'v':
                         Console.WriteLine(8); break;
                     case 'w': case 'x': case 'y': case 'z':
-                        Console.WriteLine(9); break;                
-
-
+                        Console.WriteLine(9); break;
                 }
             }
         }       
