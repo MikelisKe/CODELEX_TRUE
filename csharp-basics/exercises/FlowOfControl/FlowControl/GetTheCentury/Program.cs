@@ -18,7 +18,6 @@ namespace GetTheCentury
             }
             else
             {
-
                 if (year % 100 != 0)
                 {
                     sentury = (year / 100) + 1;
