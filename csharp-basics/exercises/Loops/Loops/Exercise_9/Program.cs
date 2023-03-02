@@ -25,6 +25,7 @@
                 Console.WriteLine($"Yougot lucky after {iterations} times ");
             }
         }
+
         Console.ReadKey();
     }
 }
