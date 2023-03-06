@@ -6,16 +6,20 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        FuelGauge carProgram = new FuelGauge(70,0);
-        Odometer odo = new Odometer(0);
+        var fueGauge = new FuelGauge();
+        var Odometer = new Odometer(fueGauge);
+        Console.WriteLine("Put the gas");
 
-        Console.WriteLine("Input fuel to star the drive: ");
-        var input = Int32.Parse(Console.ReadLine());
-        carProgram.incrementFuel(input);
+        for (int i = 0; i < 70; i++)
+        {
+            fueGauge.incrementFuel();
+        }
 
-        carProgram.Drive(carProgram.fuel,odo.currentOdeometer);
-      
-
+        Console.WriteLine($" gas");
+        for (int i = 0; i < 100; i++)
+        {
+            
+        }
         Console.ReadKey();
 
     }

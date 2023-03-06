@@ -11,41 +11,23 @@ public class FuelGauge
         this.fuel = fuel;
     }
 
-    public void incrementFuel(int fuel)
+    public void incrementFuel()
     {
-        int ammount = 0;
-        if (fuel < maxFuel)
+        if (fuel == 70)
         {
-              += ammount;
+            return;
         }
-        else
-        {
-            Console.WriteLine("im full");
-        }
+
+        fuel++;
     }
 
-    public void Drive(int fuel, int odo)
+    public void Decrament()
     {
-        for (int i = 0; i < fuel; i++)
-        {
-            if (i < fuel)
-            {
-                Console.WriteLine($"Brummbrumm... {i}  km gone");
-                fuel--;
-                odo+=10;
-            }
-            else
-            {
-                Console.WriteLine("Your out of gas");
-            }
-
-            
-        }
+        fuel--;
     }
 
-    /* ammont of fuel
-    increment the fuel
-    max fuel = 70
-    decrement if fuel is > 0 as car runs
-    */
+    public int FuelReport()
+    {
+        return fuel;
+    }
 }
