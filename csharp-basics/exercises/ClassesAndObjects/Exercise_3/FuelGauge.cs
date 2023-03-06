@@ -2,32 +2,30 @@
 
 public class FuelGauge
 {
-    private int maxFuel;
-    public int fuel;
+    public int _fuel;
 
-    public FuelGauge(int maxFuel, int fuel)
+    public FuelGauge(int fuel)
     {
-        this.maxFuel = maxFuel;
-        this.fuel = fuel;
+        _fuel = fuel;
     }
 
     public void incrementFuel()
     {
-        if (fuel == 70)
+        if (_fuel == 70)
         {
             return;
         }
 
-        fuel++;
+        _fuel++;
     }
 
     public void Decrament()
     {
-        fuel--;
+        _fuel--;
     }
 
     public int FuelReport()
     {
-        return fuel;
+        return _fuel;
     }
 }

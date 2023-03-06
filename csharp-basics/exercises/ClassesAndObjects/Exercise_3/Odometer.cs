@@ -5,10 +5,10 @@ public class Odometer
     public int _currentOdeometer;
     private FuelGauge _fuelGauge;
 
-    public Odometer()
+    public Odometer(int currentOdeometer, FuelGauge fuelGauge)
     {
-        _currentOdeometer = 0;
-        _fuelGauge = FuelGauge;
+        _currentOdeometer = currentOdeometer;
+        _fuelGauge = fuelGauge;
     }
 
     public int Report()
@@ -26,6 +26,12 @@ public class Odometer
         {
             _currentOdeometer = 0;
         }
+
+        if (_currentOdeometer % 10 == 0)
+        {
+            _fuelGauge.Decrament();
+        }
+        
 
     }
 }
