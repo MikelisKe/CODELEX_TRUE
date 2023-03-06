@@ -8,5 +8,6 @@ namespace FuelConsumptionCalculator
 {
     internal class Veryfication
     {
+
     }
 }

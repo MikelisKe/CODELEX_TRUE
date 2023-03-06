@@ -15,19 +15,19 @@ namespace FuelConsumptionCalculator
             
             Console.WriteLine();
 
-            Car car = new Car(0);
-            Car car1 = new Car(0);
+            Car car = new Car(0, 0, 60);
+            Car car1 = new Car(0, 0, 60);
             for (int i = 0; i < 3; i++)
             {
-                Console.Write("Enter first reading: ");
+                Console.Write("Enter first reading for car 1: ");
                 startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
+                Console.Write("Enter liters reading for car 1: ");
                 liters = Convert.ToInt32(Console.ReadLine());
                 car.FillUp(startKilometers, liters);
                 
-                Console.Write("Enter first reading: ");
+                Console.Write("Enter first reading for car 2: ");
                 startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
+                Console.Write("Enter liters reading for car 2: ");
                 liters = Convert.ToInt32(Console.ReadLine());
                 car1.FillUp(startKilometers, liters);
             }

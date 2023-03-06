@@ -1,19 +1,28 @@
-﻿namespace FuelConsumptionCalculator
+﻿using System.Diagnostics.Eventing.Reader;
+
+namespace FuelConsumptionCalculator
 {
     public class Car
     {
-        public Car(double startOdo)
+        public double endKilometers;
+        public double liters;
+        public double startOdo;
+        public Car(double startOdo, double endKilometers, double liters)
         {
+            this.endKilometers = endKilometers;
+            this.liters = liters;
         }
 
-        public double CalculateConsumption()
+        public double CalculateConsumption(double startOdo, double endKilometers, double liters)
         {
-            return 0;
+            double result = (endKilometers - startOdo)/(60 - liters);
+            return result;
         }
 
-        private double ConsumptionPer100Km()
+        private double ConsumptionPer100Km(double startOdo, double endKilometers, double liters)
         {
-            return 0;
+            double result = (100 - (endKilometers-startOdo)) / (60 - liters);
+            return result;
         }
 
         public bool GasHog()
@@ -28,6 +37,7 @@
 
         public void FillUp(int mileage, double liters)
         {
+
         }
     }
 }
