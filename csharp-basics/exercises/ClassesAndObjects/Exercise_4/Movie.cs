@@ -8,7 +8,6 @@ public class Movie
     public override string ToString()
     {
         return $"{title}, {studio}, {rating}";
-
     }
 
     public Movie(string _title, string _studio, string _rating)
@@ -50,11 +49,4 @@ public class Movie
         }
         return pgMovies.ToArray();
     }
-
-    /*public void showMovies()
-    {
-        
-    }*/
-
-
 }
