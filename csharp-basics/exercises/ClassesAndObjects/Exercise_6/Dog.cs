@@ -50,5 +50,4 @@ public class Dog
                 return _mother == otherDog.Mother;
             }
         }
-
-    }
+}
