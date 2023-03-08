@@ -10,33 +10,35 @@ namespace TicTacToe
         private static void Main(string[] args)
         {
             InitBoard();            
-            int playTurn = 1;
+            string playTurn = "O";
             int counter = 0;
 
             while (counter < 9)
             {
-                if (playTurn == 1 && End() == false)
+
+                if (playTurn == "O" && End() == false)
                 {
                     Console.WriteLine("choose a row (0-2):");
                     int playerRow = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("choose a column (0-2):");
                     int playerColumn = Convert.ToInt32(Console.ReadLine());
                     board[playerRow, playerColumn] = 'X';
-                    playTurn = 2;
+                    playTurn = "X";
                     DisplayBoard();
                     counter++;                        
                 }
-                else if (playTurn == 2 && End() == false )
+                else if (playTurn == "X" && End() == false )
                 {
                     Console.WriteLine("choose a row (0-2):");
                     int playerRow = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("choose a column (0-2):");
                     int playerColumn = Convert.ToInt32(Console.ReadLine());
                     board[playerRow, playerColumn] = 'O';
-                    playTurn = 1;
+                    playTurn = "O";
                     DisplayBoard();
                     counter++;
                 }
+
                 else 
                 {
                     Console.WriteLine($"Game is over, {playTurn} won ");
@@ -64,6 +66,7 @@ namespace TicTacToe
             Console.WriteLine("    --+-+--");
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
         }
+
         private static bool End()
         {
             if (board[0, 0] == board[0,1] && board[0, 1]== board[0,2] && board[0,2] != ' ' )
