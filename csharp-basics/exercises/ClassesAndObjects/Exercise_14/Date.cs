@@ -5,9 +5,9 @@ namespace Exercise_14;
 
 public class Date
 {
-    private int _year;
-    private int _month;
-    private int _day;
+    private readonly int _year;
+    private readonly int _month;
+    private readonly int _day;
 
     public Date(int year, int month, int day)
     {
