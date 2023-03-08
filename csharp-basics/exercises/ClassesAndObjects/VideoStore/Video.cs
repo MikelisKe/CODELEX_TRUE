@@ -10,7 +10,7 @@ namespace VideoStore
         public Video(string title)
         {
             Title = title;
-            _avalible = true;   
+            _avalible = true;
             _rating = new List<double>();
         }
 
@@ -36,14 +36,10 @@ namespace VideoStore
 
         public bool Available()
         {
-            return true;
+            return _avalible;
         }
 
-        public string Title
-        {
-            get => "";
-            set => throw new System.NotImplementedException();
-        }
+        public string Title { get; private set; }
 
         public override string ToString()
         {

@@ -23,8 +23,10 @@ namespace VideoStore
         public void Checkout(string title)
         {
             var video = _inventory.FirstOrDefault(v => v.Title == title);
-            if(video != null)
-            video.BeingCheckedOut();
+            if (video != null)
+            {
+                video.BeingCheckedOut();
+            }
         }
 
         public void ReturnVideo(string title)
@@ -43,7 +45,7 @@ namespace VideoStore
 
         public void ListInventory()
         {
-            _inventory.ForEach(v => Console.WriteLine());
+            _inventory.ForEach(Console.WriteLine);
         }
     }
 }
