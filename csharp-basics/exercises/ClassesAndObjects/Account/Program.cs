@@ -29,7 +29,7 @@ namespace Account
                 return $"{matt.ToString()} \n{my.ToString()}";
             }
 
-            Console.WriteLine(MoneyTransfer());
+            Console.WriteLine(MoneyTransfer()); 
 
             Account accountA = new Account("A", 100);
             Account accountB = new Account("B", 0);

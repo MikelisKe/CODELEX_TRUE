@@ -2,6 +2,7 @@
 {
     class Account
     {
+
         private string _name;
         private double _money;
 
