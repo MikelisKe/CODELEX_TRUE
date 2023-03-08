@@ -29,18 +29,9 @@ namespace Account
                 return $"{matt.ToString()} \n{my.ToString()}";
             }
 
-            Console.WriteLine(MoneyTransfer()); 
 
-            Account accountA = new Account("A", 100);
-            Account accountB = new Account("B", 0);
-            Account accountC = new Account("C", 0);
-            
-            Account.Transfer(accountA,accountB,50);
-            Account.Transfer(accountB, accountC, 25);
-
-            Console.WriteLine(accountA);
-            Console.WriteLine(accountB);
-            Console.WriteLine(accountC);
+            Console.WriteLine(FirstAccount());
+            Console.WriteLine(MoneyTransfer());
             Console.ReadKey();
         }
     }
