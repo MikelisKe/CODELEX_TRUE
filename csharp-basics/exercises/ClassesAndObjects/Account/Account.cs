@@ -37,5 +37,10 @@
             get => _name;
             set => _name = value;
         }
+        public static void Transfer(Account from, Account to, double howMuch)
+        {
+            from.Withdrawal(howMuch);
+            to.Deposit(howMuch);
+        }
     }
 }

@@ -10,19 +10,6 @@ namespace Account
     {
         private static void Main(string[] args)
         {
-            /*Account bartosAccount = new Account("Barto's account", 100.00);
-            Account bartosSwissAccount = new Account("Barto's account in Switzerland", 1000000.00);
-            Console.WriteLine("Initial state");
-            Console.WriteLine(bartosAccount);
-            Console.WriteLine(bartosSwissAccount);
-            bartosAccount.Withdrawal(20);
-            Console.WriteLine("Barto's account balance is now: " + bartosAccount.Balance());
-            bartosSwissAccount.Deposit(200);
-            Console.WriteLine("Barto's Swiss account balance is now: " + bartosSwissAccount.Balance());
-            Console.WriteLine("Final state");
-            Console.WriteLine(bartosAccount);
-            Console.WriteLine(bartosSwissAccount);*/
-
             string FirstAccount()
             {
                 Account first = new Account("first",100.0);
@@ -30,19 +17,34 @@ namespace Account
                 return first.ToString();
             }
 
+            Console.WriteLine(FirstAccount());
+
             string MoneyTransfer()
             {
                 Account matt = new Account("Matt's account", 1000);
                 Account my = new Account("My account", 0);
-                var deal = 100;
-                matt.Withdrawal(deal);
-                my.Deposit(deal);
+
+                matt.Withdrawal(100);
+                my.Deposit(100);
                 return $"{matt.ToString()} \n{my.ToString()}";
             }
 
-
-            Console.WriteLine(FirstAccount());
             Console.WriteLine(MoneyTransfer());
+
+
+            Account accountA = new Account("A", 100);
+            Account accountB = new Account("B", 0);
+            Account accountC = new Account("C", 0);
+            
+            Account.Transfer(accountA,accountB,50);
+            Account.Transfer(accountB, accountC, 25);
+
+            Console.WriteLine(accountA);
+            Console.WriteLine(accountB);
+            Console.WriteLine(accountC);
+
+            
+            
             Console.ReadKey();
         }
     }
