@@ -64,32 +64,3 @@ class Smoothie
         return name;
     }
 }
-/*
-public class Smoothie
-{
-    public string Ingridience { get; set; }
-    public decimal Price { get; set; }
-
-    public static List<Smoothie> Ingredients = new List<Smoothie>()
-    {
-        new Smoothie { Ingridience = "Strawberries", Price = 1.5m },
-        new Smoothie { Ingridience = "Banana", Price = 0.5m },
-        new Smoothie { Ingridience = "Mango", Price = 2.5m },
-        new Smoothie { Ingridience = "Blueberries", Price = 1.0m },
-        new Smoothie { Ingridience = "Raspberries", Price = 1.0m },
-        new Smoothie { Ingridience = "Apple", Price = 1.75m },
-        new Smoothie { Ingridience = "Pineapple", Price = 3.5m }
-    };
-
-    public static decimal GetCost()
-    {
-        decimal result = 0;
-
-        foreach (var ingredient in Ingredients)
-        {
-            result += ingredient.Price;
-        }
-        return result;
-    }
-}
-*/
