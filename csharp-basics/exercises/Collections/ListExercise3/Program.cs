@@ -18,13 +18,15 @@ namespace ListExercise3
             colors.Add("Orange");
             colors.Add("White");
             colors.Add("Black");
+            colors.Insert(0, "New Black");
 
             Console.WriteLine(string.Join(",", colors));
 
             //TODO: Add new color at the first and third position of the list
+            colors.Insert(2, "Blue");
 
-            //Print the list
             Console.WriteLine(string.Join(",", colors));
+            Console.ReadKey();
         }
     }
 }

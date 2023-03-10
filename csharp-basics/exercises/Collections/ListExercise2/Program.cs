@@ -11,6 +11,7 @@ namespace ListExercise2
         private static void Main(string[] args)
         {
             var colors = new List<string>();
+
             colors.Add("Red");
             colors.Add("Green");
             colors.Add("Orange");
@@ -23,7 +24,6 @@ namespace ListExercise2
             }
 
             Console.ReadKey();
-
         }
     }
 }
