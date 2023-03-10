@@ -1,43 +1,35 @@
-﻿using System.Diagnostics.Eventing.Reader;
-
-namespace FuelConsumptionCalculator
+﻿namespace FuelConsumptionCalculator
 {
-    public class Car
+    public class Car 
     {
-        public double endKilometers;
-        public double liters;
-        public double startOdo;
-        public Car(double startOdo, double endKilometers, double liters)
+        public double _startKilometers;
+        public double _endKilometers;
+        public double _liters;
+        public Car(double startOdo)
         {
-            this.endKilometers = endKilometers;
-            this.liters = liters;
+            _startKilometers = startOdo;
         }
 
-        public double CalculateConsumption(double startOdo, double endKilometers, double liters)
+        public double CalculateConsumption()
         {
-            double result = (endKilometers - startOdo)/(60 - liters);
-            return result;
+            var km = (_endKilometers - _startKilometers) / _liters;
+            return km;
         }
 
-        private double ConsumptionPer100Km(double startOdo, double endKilometers, double liters)
+        public double ConsumptionPer100Km()
         {
-            double result = (100 - (endKilometers-startOdo)) / (60 - liters);
-            return result;
+            var kmHundred = (_liters * 100) / (_endKilometers - _startKilometers);
+            return kmHundred;
         }
 
-        public bool GasHog()
-        {
-            return ConsumptionPer100Km() > 15;
-        }
+        public bool GasHog() => ConsumptionPer100Km() > 15;
 
-        public bool EconomyCar()
-        {
-            return ConsumptionPer100Km() < 5;
-        }
+        public bool EconomyCar() => ConsumptionPer100Km() < 5;
 
-        public void FillUp(int mileage, double liters)
+        public void FillUp(double mileage, double liters)
         {
-
+            mileage = _endKilometers - _startKilometers;
+            liters += _liters;
         }
     }
 }
