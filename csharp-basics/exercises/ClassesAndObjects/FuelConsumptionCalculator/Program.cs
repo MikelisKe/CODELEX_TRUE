@@ -10,30 +10,28 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
-            int liters;
-            
             Console.WriteLine();
 
-            Car car = new Car(0);
-            Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            Car tank = new Car(0);
+            Car hybridCar = new Car(0);
+
+            for (int i = 0; i < 1; i++)
             {
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car.FillUp(startKilometers, liters);
-                
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car1.FillUp(startKilometers, liters);
+                Console.Write("Enter first reading for tank: ");
+                tank._endKilometers = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter liters reading for tank: ");
+                tank._liters = Convert.ToInt32(Console.ReadLine());
+                tank.FillUp(tank._endKilometers-tank._startKilometers, tank._liters);
+
+                Console.Write("Enter first reading for hybrid: ");
+                hybridCar._endKilometers = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter liters reading for hybrid: ");
+                hybridCar._liters = Convert.ToInt32(Console.ReadLine());
+                hybridCar.FillUp(hybridCar._endKilometers - hybridCar._startKilometers, hybridCar._liters);
             }
 
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
+            Console.WriteLine("Kilometers per liter are " + tank.CalculateConsumption() + " gasHog:" + tank.GasHog());
+            Console.WriteLine("hybridCar Kilometers per liter are " + hybridCar.CalculateConsumption() + " economyCar:" + hybridCar.EconomyCar());
             Console.ReadKey();
         }
     }
