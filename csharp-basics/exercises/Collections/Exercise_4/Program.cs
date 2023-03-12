@@ -1,5 +1,4 @@
-﻿
-List<string> result = new List<string>();
+﻿List<string> result = new List<string>();
 
 Console.WriteLine("Write people names, then return");
 var name = Console.ReadLine();
