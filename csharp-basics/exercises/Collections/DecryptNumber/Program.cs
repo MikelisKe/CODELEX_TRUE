@@ -32,12 +32,31 @@ namespace DecryptNumber
                 { ')', '0' },
             };
 
+
             var decryptedNumbers = cryptedNumbers.Select(x => new string(x.Select(c => keyboard.ContainsKey(c) ? keyboard[c] : c).ToArray())).ToList();
-            
+
+            /*foreach (var cryptedNumber in cryptedNumbers)
+            {
+                string decryptedNumber = "";
+                foreach (char c in cryptedNumber)
+                {
+                    if (keyboard.ContainsKey(c))
+                    {
+                        decryptedNumber += keyboard[c];
+                    }
+                    else
+                    {
+                        decryptedNumber += c;
+                    }
+                }
+                decryptedNumbers.Add(decryptedNumber);
+            }*/
+
             foreach (var crypt in decryptedNumbers)
             {
                 Console.WriteLine(crypt);
             }
+
 
             Console.ReadKey();
         }
