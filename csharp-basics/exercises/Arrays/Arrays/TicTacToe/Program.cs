@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace TicTacToe
 {
@@ -8,8 +9,43 @@ namespace TicTacToe
 
         private static void Main(string[] args)
         {
-            InitBoard();
-            DisplayBoard();
+            InitBoard();            
+            string playTurn = "O";
+            int counter = 0;
+
+            while (counter < 9)
+            {
+
+                if (playTurn == "O" && End() == false)
+                {
+                    Console.WriteLine("choose a row (0-2):");
+                    int playerRow = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("choose a column (0-2):");
+                    int playerColumn = Convert.ToInt32(Console.ReadLine());
+                    board[playerRow, playerColumn] = 'X';
+                    playTurn = "X";
+                    DisplayBoard();
+                    counter++;                        
+                }
+                else if (playTurn == "X" && End() == false )
+                {
+                    Console.WriteLine("choose a row (0-2):");
+                    int playerRow = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("choose a column (0-2):");
+                    int playerColumn = Convert.ToInt32(Console.ReadLine());
+                    board[playerRow, playerColumn] = 'O';
+                    playTurn = "O";
+                    DisplayBoard();
+                    counter++;
+                }
+
+                else 
+                {
+                    Console.WriteLine($"Game is over, {playTurn} won ");
+                    break;             
+                }
+            }
+            Console.ReadKey();
         }
 
         private static void InitBoard()
@@ -19,8 +55,7 @@ namespace TicTacToe
             {
                 for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
-            }
-            
+            }            
         }
 
         private static void DisplayBoard()
@@ -30,7 +65,43 @@ namespace TicTacToe
             Console.WriteLine("  1  " + board[1, 0] + "|" + board[1, 1] + "|" + board[1, 2]);
             Console.WriteLine("    --+-+--");
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
-            Console.WriteLine("    --+-+--");
+        }
+
+        private static bool End()
+        {
+            if (board[0, 0] == board[0,1] && board[0, 1]== board[0,2] && board[0,2] != ' ' )
+            {
+                return true;
+            }
+            else if (board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 2] != ' ')
+            {
+                return true;
+            }
+            else if (board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 2] != ' ')
+            {
+                return true; 
+            }
+            else if (board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[2, 0] != ' ')
+            {
+                return true;
+            }
+            else if (board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[2, 1] != ' ')
+            {
+                return true;
+            }
+            else if (board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[2, 2] != ' ')
+            {
+                return true;
+            }
+            else if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[2, 2] != ' ')
+            {
+                return true;
+            }
+            else if (board[0, 2] == board[1, 1] && board[1, 1] == board[0, 2] && board[0, 2] != ' ')
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
