@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using Microsoft.SqlServer.Server;
+
 namespace PhoneBook
 {
     public class PhoneEntry
     {
-        public string name;
-        public string number;
+        public string Name;
+        public string Number;
     }
 }
