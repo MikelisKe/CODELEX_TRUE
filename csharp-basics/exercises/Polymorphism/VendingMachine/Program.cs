@@ -6,7 +6,17 @@ namespace VendingMachine
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Money maks = new Money();
+
+            void input()
+            {
+
+            }
+            VendingMachine street = new VendingMachine();
+            street.AddProduct("Snikels",price:maks, 15);
+            street.InsertCoin(maks);
+
+
         }
     }
 }
