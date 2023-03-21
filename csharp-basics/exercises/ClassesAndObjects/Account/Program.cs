@@ -29,7 +29,6 @@ namespace Account
                 return $"{matt.ToString()} \n{my.ToString()}";
             }
 
-
             Console.WriteLine(FirstAccount());
             Console.WriteLine(MoneyTransfer());
             Console.ReadKey();
