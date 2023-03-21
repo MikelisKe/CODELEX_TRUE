@@ -20,7 +20,7 @@ public class Student
                 correct++;
             }
         }
-
+    
         var passValue = Convert.ToInt32(paper.PassMark.TrimEnd('%'));
         double prePer = correct / Convert.ToDouble(questNum);
         double percent = prePer * 100;
