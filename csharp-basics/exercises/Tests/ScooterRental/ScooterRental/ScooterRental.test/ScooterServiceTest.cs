@@ -1,10 +1,11 @@
 namespace ScooterRental.test
 {
-    public class Tests
+    public class ScooterServiceTest
     {
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Test]

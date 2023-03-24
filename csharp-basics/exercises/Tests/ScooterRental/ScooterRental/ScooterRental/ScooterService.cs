@@ -8,10 +8,16 @@ namespace ScooterRental
 {
     internal class ScooterService : IScooterService
     {
-        List<>
+        private readonly List<Scooter>  _scooters;
+
+        public ScooterService()
+        {
+            _scooters = new List<Scooter>();
+        }
         public void AddScooter(string id, decimal pricePerMinute)
         {
-            throw new NotImplementedException();
+            var scooters = new Scooter(id, pricePerMinute);
+            _scooters.Add(scooters);
         }
 
         public void RemoveScooter(string id)
