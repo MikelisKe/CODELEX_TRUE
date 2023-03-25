@@ -15,6 +15,8 @@ internal class Program
 
         Console.WriteLine(product3.ChangePrice());
         Console.WriteLine(product3.ChangeQuantitity());
+        
+        Console.WriteLine(product3.PrintProduct());
 
         Console.ReadKey();
     }

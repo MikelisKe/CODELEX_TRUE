@@ -10,34 +10,34 @@ namespace Exercise_1
 {
     class Product
     {
-        public double Price;
-        public int ammount;
-        private string name;
+        private double _price;
+        private int _ammount;
+        private string _name;
 
         public Product(string aName, double aPrice, int aAmmount)
         {
-            name = aName;
-            Price = aPrice;
-            ammount = aAmmount;
+            _name = aName;
+            _price = aPrice;
+            _ammount = aAmmount;
         }
 
         public string PrintProduct()
         {
-            string b = name + ", Price " + Price.ToString() + ", ammount "+ammount.ToString();
+            string b = _name + ", Price " + _price + ", ammount "+_ammount;
             return b;
         }
 
         public int ChangeQuantitity()
         {
-            Console.WriteLine("Whats the new ammount of product, you want to add");
+            Console.WriteLine("Whats the ammount of product, you want to add");
             int q = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
-            return ammount + q;
+            return _ammount += q;
         }
         public double ChangePrice()
         {
             Console.WriteLine("Whats the new price?");
             double p = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
-            return p;
+            return _price = p;
         }
     }
 }
