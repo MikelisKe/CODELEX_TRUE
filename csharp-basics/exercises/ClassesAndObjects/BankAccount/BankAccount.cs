@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BankAccount
 {
-    class Program
+    class BankAccount
     {
-        private string _accountName { get; set; }
+        private string _accountName;
         private double _balance { get; set; }
 
-        public Program(string accountName, double balance)
+        public BankAccount(string accountName, double balance)
         {
             _balance = balance;
             _accountName = accountName; 
@@ -31,8 +31,8 @@ namespace BankAccount
         }
         static void Main(string[] args)
         {
-            Program test = new Program("Andris", -12.43);
-            Program test1 = new Program("Boby", 123.4);
+            BankAccount test = new BankAccount("Andris", -12.43);
+            BankAccount test1 = new BankAccount("Boby", 123.4);
             
             Console.WriteLine(test.ShowUserNameAndBalance());
             Console.WriteLine(test1.ShowUserNameAndBalance());
