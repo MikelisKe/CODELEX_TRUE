@@ -2,37 +2,38 @@
 
 public class Movie
 {
-    private string title;
-    private string studio;
-    private string rating;
+    private string _title;
+    private string _studio;
+    private string _rating;
     public override string ToString()
     {
-        return $"{title}, {studio}, {rating}";
+        return $"{_title}, {_studio}, {_rating}";
     }
 
-    public Movie(string _title, string _studio, string _rating)
+    public Movie(string title, string studio, string rating)
     {
-        title = _title;
-        studio = _studio;
-        Rating = _rating;
+        _title = title;
+        _studio = studio;
+        _rating = rating;
     }
 
     public Movie(string _title, string _studio) : this(_title,_studio, "PG")
     {
         
     }
+
     public string Rating
     {
-        get => rating;
+        get => _rating;
         set
         {
             if (value == "PG" || value == "PG-13")
             {
-                rating = value;
+                _rating = value;
             }
             else
             {
-                rating = "NR";
+                _rating = "NR";
             }
         }
     }

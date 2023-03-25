@@ -2,7 +2,7 @@
 
 public class Odometer
 {
-    public int _currentOdeometer;
+    private int _currentOdeometer;
     private FuelGauge _fuelGauge;
 
     public Odometer(int currentOdeometer, FuelGauge fuelGauge)
