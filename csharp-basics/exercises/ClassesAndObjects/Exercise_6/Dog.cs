@@ -1,7 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-using System.Xml.Linq;
-
-namespace Exercise_6;
+﻿namespace Exercise_6;
 
 public class Dog
 {
@@ -10,7 +7,7 @@ public class Dog
     public Dog _mother;
     public Dog _father;
 
-    public Dog(string name, string sex ) 
+    public Dog(string name, string sex)
     {
         _sex = sex;
         _name = name;
@@ -40,14 +37,14 @@ public class Dog
     }
 
     public bool HasSameMotherAs(Dog otherDog)
+    {
+        if (_mother == null || otherDog.Mother == null)
         {
-            if (_mother == null || otherDog.Mother == null)
-            {
-                return false;
-            }
-            else
-            {
-                return _mother == otherDog.Mother;
-            }
+            return false;
         }
+        else
+        {
+            return _mother == otherDog.Mother;
+        }
+    }
 }

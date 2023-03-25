@@ -31,7 +31,5 @@ public class Odometer
         {
             _fuelGauge.Decrament();
         }
-        
-
     }
 }
