@@ -1,6 +1,6 @@
 ﻿namespace Exercise_12;
 
-public class Student
+public class Student:IStundent
 {
     public string[] TestsTaken { get; set; }
 
@@ -25,6 +25,6 @@ public class Student
         double prePer = correct / Convert.ToDouble(questNum);
         double percent = prePer * 100;
 
-        Console.WriteLine(percent >= passValue ? "You Passed" : "Try Again");
+        Console.WriteLine(percent >= passValue ? $" {paper.Subject}: Passed! {Math.Round(percent,0)}%"  : $"{paper.Subject}: Failed! {Math.Round(percent,0)}%");
     }
 }

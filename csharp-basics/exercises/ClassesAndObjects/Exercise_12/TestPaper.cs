@@ -1,6 +1,4 @@
-﻿using System.Runtime.ConstrainedExecution;
-
-namespace Exercise_12;
+﻿namespace Exercise_12;
 
 public class TestPaper: ITestPaper
 {
