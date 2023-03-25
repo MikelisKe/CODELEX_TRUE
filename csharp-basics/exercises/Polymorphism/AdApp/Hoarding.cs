@@ -14,10 +14,5 @@ namespace AdApp
         {
             return base.Cost();
         }
-
-        public override string ToString() 
-        {
-            return base.ToString();
-        }
     }
 }
