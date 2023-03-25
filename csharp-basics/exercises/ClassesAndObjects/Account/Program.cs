@@ -8,8 +8,14 @@ namespace Account
 {
     class Program
     {
+        public static void Transfer(Account from, Account to, double howMuch)
+        {
+            from.Withdrawal(howMuch);
+            to.Deposit(howMuch);
+        }
         private static void Main(string[] args)
         {
+             
             string FirstAccount()
             {
                 Account first = new Account("first",100.0);
@@ -18,17 +24,16 @@ namespace Account
             }
 
             Console.WriteLine(FirstAccount());
-
+            
             string MoneyTransfer()
             {
                 Account matt = new Account("Matt's account", 1000);
                 Account my = new Account("My account", 0);
 
-                matt.Withdrawal(100);
-                my.Deposit(100);
+                Transfer(matt, my, 100);
+                
                 return $"{matt.ToString()} \n{my.ToString()}";
             }
-
 
             Console.WriteLine(FirstAccount());
             Console.WriteLine(MoneyTransfer());
