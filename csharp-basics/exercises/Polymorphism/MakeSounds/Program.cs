@@ -11,9 +11,9 @@ namespace MakeSounds
             sounds.Add(new Firework());
             sounds.Add(new Parrot());
             sounds.Add(new Radio());
-            foreach (ISound sound in sounds )
+            foreach (var sound in sounds)
             {
-               sound.PlaySound();
+                sound.PlaySound();
             }
 
             Console.ReadKey();

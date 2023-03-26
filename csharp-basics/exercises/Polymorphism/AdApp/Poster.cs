@@ -11,10 +11,10 @@
             _numOfCopies=numOfCopies;
         }
 
-        public new int Cost()
+        public override int Cost()
         {
             var addCost = _costPerCopy * _numOfCopies;
-            return base.Cost();
+            return base.Cost()+ addCost;
         }
 
         public override string ToString()

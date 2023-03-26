@@ -1,6 +1,6 @@
 namespace AdApp
 {
-    public class Hoarding: Advert
+    public class Hoarding : Advert
     {
         private int _rate;
         private int _numDays;
@@ -11,13 +11,13 @@ namespace AdApp
             _numDays = numDays;
         }
 
-        public new int Cost()
+        public override int Cost()
         {
             var addCost = _numDays * _rate;
             return base.Cost() + addCost;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
             return base.ToString();
         }

@@ -2,14 +2,18 @@
 
 namespace Persons
 {
-    public class Cat:Felime
+
+    public class Cat : Felime
     {
+
         private string _breed;
-        public Cat(string animalName, double animalWeight, int foodEaten, string livingRegion, string breed) : 
+
+        public Cat(string animalName, double animalWeight, int foodEaten, string livingRegion, string breed) :
             base(animalName, animalWeight, foodEaten, livingRegion)
         {
             _breed = breed;
         }
+
         public override void MakeSound()
         {
             Console.WriteLine("Meaw..");

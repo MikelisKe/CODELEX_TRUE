@@ -63,7 +63,6 @@ namespace VendingMachine
 
         public bool AddProduct(string name, Money price, int count)
         {
-            
             return true;
         }
 

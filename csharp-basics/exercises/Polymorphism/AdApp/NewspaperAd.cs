@@ -11,7 +11,7 @@ namespace AdApp
             _column = column;
         }
 
-        private new int Cost()
+        public override int Cost()
         {
             var addCost = _rate * _column;
             var feee = base.Cost()+addCost;
