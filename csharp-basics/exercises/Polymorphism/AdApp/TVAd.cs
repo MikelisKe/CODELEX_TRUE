@@ -14,7 +14,7 @@ namespace AdApp
         
         public new int Cost() 
         {
-            var addCost = (_peakTime ==true) ? 2* _sec*_rate : _sec *_rate;
+            var addCost = _peakTime ==true ? 2* _sec*_rate : _sec *_rate;
             return base.Cost()+ addCost;
         }
 

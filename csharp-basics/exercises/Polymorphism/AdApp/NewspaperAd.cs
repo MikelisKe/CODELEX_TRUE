@@ -14,8 +14,8 @@ namespace AdApp
         private new int Cost()
         {
             var addCost = _rate * _column;
-            var fee = base.Cost()+addCost;
-            return fee;
+            var feee = base.Cost()+addCost;
+            return feee;
         }
 
         public override string ToString()

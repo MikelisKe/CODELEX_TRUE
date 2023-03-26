@@ -12,6 +12,7 @@ namespace AdApp
             c.AddAdvert(new NewspaperAd(0, 30, 20));
             c.AddAdvert(new TVAd(50000, 1000, 30, true));
             c.AddAdvert(new Poster(400, 50, 400));
+            
             Console.WriteLine(c);
 
         }
