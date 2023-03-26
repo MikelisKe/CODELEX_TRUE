@@ -1,18 +1,22 @@
 namespace AdApp
 {
-    public class Hoarding: Advert
+    public class Hoarding : Advert
     {
-        private int rate;
-        //per day
-        private int numDays;
+        private int _fee { get; set; }
+        private int _rate { get; set; }
+        private int _numDays { get; set; }
 
-        public Hoarding(int fee) : base(fee)
+        public Hoarding(int fee, int rate, int numDays) : base(fee)
         {
+            _fee = fee;
+            _rate = rate;
+            _numDays = numDays;
         }
 
-        public new int Cost() 
+        public new int Cost()
         {
-            return base.Cost();
+            var result = (_rate * _numDays)+ base.Cost();
+            return _fee = result;
         }
     }
 }
