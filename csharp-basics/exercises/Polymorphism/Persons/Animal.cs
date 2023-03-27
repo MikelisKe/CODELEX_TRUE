@@ -4,9 +4,9 @@
     {
         protected string _animalName;
         protected double _animalWeight;
-        protected int _foodEaten;
+        public int _foodEaten;
 
-        protected Animal(string animalName, double animalWeight, int foodEaten)
+        public Animal(string animalName, double animalWeight, int foodEaten)
         {
             _animalName = animalName;
             _animalWeight = animalWeight;

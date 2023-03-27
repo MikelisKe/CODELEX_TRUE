@@ -6,7 +6,7 @@ namespace Persons
     public class Cat : Felime
     {
 
-        private string _breed;
+        public string _breed;
 
         public Cat(string animalName, double animalWeight, int foodEaten, string livingRegion, string breed) :
             base(animalName, animalWeight, foodEaten, livingRegion)
