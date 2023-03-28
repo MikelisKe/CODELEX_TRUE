@@ -27,6 +27,17 @@ namespace Persons
             _cat._foodEaten.Should().Be(3);
         }
 
+        [Test]
+        public void MakeSound_DoesMakeSoundInString()
+        {
+            StringWriter sw = new StringWriter();
+            Console.SetOut(sw);
 
+            _cat.MakeSound();
+
+            string expectedOutput = "Meaw..\r\n";
+            sw.ToString().Should().Be(expectedOutput);
+            //Assert.AreEqual(expectedOutput, sw.ToString());
+        }
     }
 }
