@@ -21,6 +21,10 @@ namespace Persons
 
         public override void Eat(Food food, int count)
         {
+            if (food == null)
+            {
+
+            }
             _foodEaten += food._quantity;
         }
         public override string ToString()

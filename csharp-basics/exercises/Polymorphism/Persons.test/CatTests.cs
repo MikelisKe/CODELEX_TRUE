@@ -16,13 +16,14 @@ namespace Persons
         public void Setup()
         {
             _cat = new Cat("name", 1.4, 0, "purchix", "Staltais");
-            _food = new Food(0);
+            _food = new Food(3);
         }
 
         [Test]
         public void Eat_FoodIsAddedToFoodEaten()
         {
             _cat.Eat(_food, 3);
+
             _cat._foodEaten.Should().Be(3);
         }
 
