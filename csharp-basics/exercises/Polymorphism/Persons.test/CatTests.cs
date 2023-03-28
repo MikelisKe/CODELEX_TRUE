@@ -28,6 +28,12 @@ namespace Persons
         }
 
         [Test]
+        public void Eat_FoodIsValidParameter()
+        {
+
+        }
+
+        [Test]
         public void MakeSound_DoesMakeSoundInString()
         {
             StringWriter sw = new StringWriter();
