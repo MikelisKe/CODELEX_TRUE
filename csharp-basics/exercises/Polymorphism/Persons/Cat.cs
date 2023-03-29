@@ -23,8 +23,9 @@ namespace Persons
         {
             if (food == null)
             {
-
+                throw new ArgumentNullException();
             }
+
             _foodEaten += food._quantity;
         }
         public override string ToString()

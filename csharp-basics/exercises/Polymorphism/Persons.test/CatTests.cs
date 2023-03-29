@@ -30,7 +30,11 @@ namespace Persons
         [Test]
         public void Eat_FoodIsValidParameter()
         {
-
+            Action act = () =>
+            {
+                _cat.Eat(null , 3);
+            };
+            act.Should().Throw<ArgumentNullException>();
         }
 
         [Test]
@@ -41,7 +45,7 @@ namespace Persons
 
             _cat.MakeSound();
 
-            string expectedOutput = "Meaw..\r\n";
+            string expectedOutput = "Meaw..\r\n" ;
             sw.ToString().Should().Be(expectedOutput);
             //Assert.AreEqual(expectedOutput, sw.ToString());
         }
