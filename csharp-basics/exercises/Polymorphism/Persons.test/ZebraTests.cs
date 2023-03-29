@@ -30,5 +30,22 @@ namespace Persons.test
             sw.ToString().Should().Be(expectedOutput);
         }
 
+        [Test]
+        public void Eat_FoodIsAddedToFoodEaten()
+        {
+            _zebra.Eat(_vegetable, 3);
+
+            _zebra._foodEaten.Should().Be(3);
+        }
+        [Test]
+        public void Eat_FoodIsValidParameter()
+        {
+            Action act = () =>
+            {
+                _zebra.Eat(null, 3);
+            };
+            act.Should().Throw<ArgumentNullException>();
+        }
+
     }
 }

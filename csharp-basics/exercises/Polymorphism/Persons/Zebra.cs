@@ -16,6 +16,10 @@ namespace Persons
 
         public override void Eat(Food food, int count)
         {
+            if (food is null)
+            {
+                throw new ArgumentNullException();
+            }
             if (food is Meat)
             {
                 Console.WriteLine("are not eating that type of food!");
@@ -23,5 +27,6 @@ namespace Persons
             }
             _foodEaten += food._quantity;
         }
+
     }
 }

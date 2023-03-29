@@ -35,7 +35,7 @@ namespace Persons
                         Console.WriteLine("feed me with ?");
                         var zinpu = Console.ReadLine();
                         var zarg = zinpu.Split(',');
-                        var zfood = new Food(int.Parse(zarg[1]));
+                        var zfood = new Vegetable(int.Parse(zarg[1]));
                         zebra.Eat(zfood, int.Parse(zarg[1]));
                         Console.WriteLine(zebra.ToString());
                         break;
@@ -48,7 +48,7 @@ namespace Persons
                         Console.WriteLine("feed me with ?");
                         var tInput = Console.ReadLine();
                         var targ = tInput.Split(',');
-                        var tFood = new Food(int.Parse(targ[1]));
+                        var tFood = new Meat(int.Parse(targ[1]));
                         tiger.Eat(tFood, int.Parse(targ[1]));
                         Console.WriteLine(tiger.ToString());
                         break;
