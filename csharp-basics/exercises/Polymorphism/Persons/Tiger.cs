@@ -18,10 +18,14 @@ namespace Persons
         {
             if (food is Vegetable)
             {
-                Console.WriteLine("are not eating that type of food!");
-                return;
+                throw new ArgumentException();
             }
             _foodEaten += food._quantity;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name} {_animalName} {_animalWeight}";
         }
     }
 }

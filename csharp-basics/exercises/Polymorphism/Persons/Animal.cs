@@ -2,8 +2,8 @@
 {
     public abstract class Animal
     {
-        protected string _animalName;
-        protected double _animalWeight;
+        public string _animalName;
+        public double _animalWeight;
         public int _foodEaten;
 
         public Animal(string animalName, double animalWeight, int foodEaten)

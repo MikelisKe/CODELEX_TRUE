@@ -49,5 +49,13 @@ namespace Persons
             sw.ToString().Should().Be(expectedOutput);
             //Assert.AreEqual(expectedOutput, sw.ToString());
         }
+
+        [Test]
+        public void ToString_ValidOutputAsResult()
+        {
+            var result = _cat.ToString();
+
+            _cat.ToString().Should().Be(result);
+        }
     }
 }

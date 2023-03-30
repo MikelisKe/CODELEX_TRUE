@@ -11,12 +11,14 @@ namespace Persons.test
     {
         private Zebra _zebra;
         private Vegetable _vegetable;
+        private Meat _meat;
 
         [SetUp]
         public void Setup()
         {
             _zebra = new Zebra("Ne Zirgs", 95.5, 0, "mezhparks");
             _vegetable = new Vegetable(3);
+            _meat = new Meat(1);
         }
         [Test]
         public void MakeSound_DoesMakeSoundInString()
@@ -45,6 +47,34 @@ namespace Persons.test
                 _zebra.Eat(null, 3);
             };
             act.Should().Throw<ArgumentNullException>();
+        }
+
+        [Test]
+        public void Eat_FoodIsMeatParemeter()
+        {
+            Action act = () =>
+            {
+                _zebra.Eat(_meat, 1);
+            };
+            act.Should().Throw<ArgumentException>();
+        }
+
+        [Test]
+        public void Eat_CountIsNullOrEmpty()
+        {
+            Action act = () =>
+            {
+                _zebra.Eat(_vegetable, -14);
+            };
+            act.Should().Throw<ArgumentOutOfRangeException>();
+        }
+
+        [Test]
+        public void ToString_ValidOutputAsResult()
+        {
+            var result = _zebra.ToString();
+
+            _zebra.ToString().Should().Be(result);
         }
 
     }
