@@ -35,7 +35,7 @@ namespace Persons
 
         public override string ToString()
         {
-            return $"{this.GetType().Name} {_animalName} {_animalWeight}";
+            return $"{this.GetType().Name} {_animalName} {_animalWeight} {_livingRegion}";
         }
     }
 }

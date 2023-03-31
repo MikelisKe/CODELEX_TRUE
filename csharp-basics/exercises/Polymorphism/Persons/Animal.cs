@@ -17,10 +17,5 @@
 
 
         public abstract void Eat(Food food, int count);
-       
-        public override string ToString()
-        {
-            return $"{this.GetType().Name} {_animalName} {_animalWeight}";
-        }
     }
 }
