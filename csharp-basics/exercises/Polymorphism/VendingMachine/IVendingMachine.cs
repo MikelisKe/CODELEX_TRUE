@@ -13,7 +13,7 @@ namespace VendingMachine
         public bool HasProducts { get; }
 
         public Money Amount { get; }
-        Product[] Products { get; set; }
+        Product[] Products { get; }
         Money InsertCoin(Money amount);
 
         Money ReturnMoney();
