@@ -4,7 +4,6 @@ using System.Collections.Generic;
 namespace VendingMachine
 {
     public class VendingMachine: IVendingMachine
-    //Es salabošu šo visu, bet ne šodien vairs. :(
     {
         private List<Money> _validCoins;
 
@@ -42,7 +41,7 @@ namespace VendingMachine
             }
             else
             {
-                Console.WriteLine("insufficient funds");
+                throw new ArgumentException();
             }
 
             Maks.Cents = cents;

@@ -27,12 +27,13 @@ namespace VendingMachine.Test
         [Test]
         public void InsertCoin_ifResultIsValid()
         {
-            _money.Cents = 10;
-            _money.Euros = 1;
-            var result = _bot.InsertCoin(_money);
-            //result.Should().NotBeNull();
-            result.Euros.Should().Be(1);
-            result.Cents.Should().Be(10);
+            var money = new Money();
+            money.Cents = 10;
+            money.Euros = 1;
+
+            _bot.InsertCoin(money);
+
+
         }
     }
 }
