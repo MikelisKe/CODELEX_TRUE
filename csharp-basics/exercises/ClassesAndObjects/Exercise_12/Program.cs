@@ -4,11 +4,6 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        /* TestPaper math = new TestPaper("Math", new []{"1A", "2C", "3D", "4T", "5E"}, "60%");
-
-         Student john = new Student();
-
-         john.TakeTest(math, new []{ "1A", "2C", "3D", "4U", "5E" });*/
 
         TestPaper paper1 = new TestPaper("Math", new string[] { "1A", "2C", "3D", "4A", "5A" }, "60%");
         TestPaper paper2 = new TestPaper("Chemistry", new string[] { "1C", "2C", "3D", "4A" }, "75%");
@@ -22,8 +17,6 @@ internal class Program
         student2.TakeTest(paper2, new string[] { "1C", "2D", "3A", "4C" });
         student2.TakeTest(paper3, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
         
-
-
         Console.ReadKey();
     }
 }
