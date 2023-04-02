@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccount
+namespace ScooterRental
 {
-    class Program
+    internal class IScooterService
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
