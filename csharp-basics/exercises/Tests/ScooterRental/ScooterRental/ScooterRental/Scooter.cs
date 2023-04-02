@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScooterRental
 {
-    internal class Scooter
+    public class Scooter
     {
         /// <summary>
         /// Create new instance of the scooter.

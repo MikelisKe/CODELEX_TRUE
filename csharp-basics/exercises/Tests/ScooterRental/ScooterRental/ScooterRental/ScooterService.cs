@@ -6,33 +6,68 @@ using System.Threading.Tasks;
 
 namespace ScooterRental
 {
-    internal class ScooterService : IScooterService
+    public class ScooterService : IScooterService
     {
         private readonly List<Scooter>  _scooters;
 
-        public ScooterService()
+        public ScooterService(List<Scooter> scooters)
         {
-            _scooters = new List<Scooter>();
+            _scooters = scooters;
         }
         public void AddScooter(string id, decimal pricePerMinute)
         {
+            if (String.IsNullOrEmpty(id))
+            {
+                throw new ScooterIdThrowException();
+            }
+
+            if (pricePerMinute <= 0)
+            {
+                throw new invalidPricePerMinuteException();
+            }
             var scooters = new Scooter(id, pricePerMinute);
             _scooters.Add(scooters);
         }
 
         public void RemoveScooter(string id)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(id))
+            {
+                throw new ScooterIdThrowException();
+            }
+
+            var scooter = _scooters.SingleOrDefault(x => x.Id == id);
+            if (scooter != null)
+            {
+                _scooters.Remove(scooter);
+            }
+            else
+            {
+                throw new ScooterNotFoundException();
+            }
         }
 
         public IList<Scooter> GetScooters()
         {
-            throw new NotImplementedException();
+            return _scooters.ToList();
         }
 
         public Scooter GetScooterById(string scooterId)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(scooterId))
+            {
+                throw new ScooterIdThrowException();
+            }
+
+            var scooter = _scooters.SingleOrDefault(x => x.Id == scooterId);
+            if (scooter != null)
+            {
+                return scooter;
+            }
+            else
+            {
+                throw new ScooterNotFoundException();
+            }
         }
     }
 }
