@@ -1,7 +1,37 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\boriss\AppData\Local\Temp\JetBrains\ReSharperPlatformVs17\vAny_8b9de0e6\CoverageData\_Polymorphism.-2031956793\Snapshot\snapshot.utdcvr</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=83d5bb23_002D1bfd_002D47c7_002Da50a_002Dbfcebaa1d3a9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTests #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a6c6f93d_002Df133_002D42e1_002D889f_002D8ae95955c4fe/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTests #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a9630e56_002Db41d_002D400f_002Db1b0_002D11019d18ae86/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c2915783_002D06e6_002D4b0c_002D8284_002D41b6a833fbba/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Tests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B8318491-FC41-44F0-BED3-40F838248D94::net7.0::VendingMachine.Test.Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.test.TigerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.test.ZebraTests.MakeSound_DoesMakeSoundInString&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.test.ZebraTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.test.MouseTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7966c63_002Daa96_002D43ab_002Dadcd_002D5d86da69d4eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e9965374_002De1d0_002D4b68_002D82d1_002D9b3e068b22c5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

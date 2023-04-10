@@ -2,23 +2,21 @@
 
 namespace VendingMachine
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Money maks = new Money();
-            maks.Cents = 10;
-            maks.Euros = 1;
-            Money price = new Money();
-            price.Cents = 20;
-            price.Euros = 0;
-
-
-
             VendingMachine street = new VendingMachine();
-            street.AddProduct("Snikels", price: price, 15);
-            street.InsertCoin(maks);
+            street.InsertCoin(new Money { Cents = 50 });
+            street.InsertCoin(new Money { Euros = 1 });
 
+            street.AddProduct("Snikers", new Money { Cents = 10, Euros = 1 }, 10);
+            street.AddProduct("Beka", new Money { Cents = 80, Euros = 0 }, 10);
+
+            street.UpdateProduct(0, null,null, 9);
+            street.ReturnMoney();
+
+            Console.WriteLine(street.ToString());
 
         }
     }

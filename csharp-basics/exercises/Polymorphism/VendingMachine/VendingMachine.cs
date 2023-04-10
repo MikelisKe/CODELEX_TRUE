@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VendingMachine
 {
-    public class VendingMachine: IVendingMachine
+    public class VendingMachine : IVendingMachine
     {
-        private List<Money> _validCoins;
-
+        public List<Money> _validCoins;
         public VendingMachine()
         {
             _validCoins = new List<Money>
@@ -19,60 +19,120 @@ namespace VendingMachine
             };
         }
         public string Manufacturer { get; }
-        public bool HasProducts { get; }
+        public bool HasProducts { get => _products.Any(); }
         public Money Amount { get; }
-        public Product[] Products { get; }
+        public Product[] Products { get; set; }
 
-        private new Money Maks;
-        public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product product)
+        public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product[] products)
         {
             Manufacturer = manufacturer;
-            HasProducts = hasProducts;
             Amount = amount;
+            Products = products;
         }
+
+        private Product[] _products = new Product[2];
+
+        public Money _kase = new Money();
+        private int _intKase = 0;
+
         public Money InsertCoin(Money amount)
         {
-            var euros = 0;
-            var cents = 0;
             if (_validCoins.Contains(amount))
             {
-                cents += amount.Cents;
-                euros += amount.Euros;
+                _kase.Cents += amount.Cents;
+                _kase.Euros += amount.Euros;
+                _intKase += amount.Cents + (amount.Euros * 100);
             }
             else
             {
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
+                return _kase;
             }
 
-            Maks.Cents = cents;
-            Maks.Euros = euros;
-
-            return Maks;
+            return _kase;
         }
+
+
 
         public Money ReturnMoney()
         {
-            var u = Maks.Cents - Amount.Cents;
-            var t = Maks.Euros - Amount.Euros;
-            var result = new Money();
-            result.Cents = u;
-            result.Euros = t;
-            return result;
+            return _kase;
         }
 
+        int indexOfNumber = 0;
         public bool AddProduct(string name, Money price, int count)
         {
+
+            if (String.IsNullOrWhiteSpace(name) || count < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+                return false;
+            }
+            
+
+            var product = new Product { Name = name, Price = price, Available = count };
+            _products[indexOfNumber] = product;
+            indexOfNumber++;
+
             return true;
         }
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            return false;
+            if (productNumber < 0 && productNumber > 4)
+            {
+                throw new ArgumentOutOfRangeException();
+                return false;
+            }
+
+            var product = _products[productNumber];
+            if (name == null && !price.HasValue )   //notiek pirkšana
+            {
+                var nauda = (product.Price.Euros * 100 + product.Price.Cents);
+                _intKase -= nauda; //  1.5
+
+
+
+                _kase.Euros = (int)(_intKase/100);
+                _kase.Cents = (int)(_intKase % 100);
+                return true;
+            }
+           
+
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException();
+            }
+            else
+            {
+                product.Name = name;
+            }
+
+            if (price.HasValue)
+            {
+                product.Price = price.Value;
+            }
+
+            if (amount >= 0)
+            {
+                product.Available = amount;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            
+            
+            
+
+            return true;
+
         }
 
         public override string ToString()
         {
-            return $"{Products},{Amount}";
+            return $"Izdotā nauda ir {_kase.Euros},{_kase.Cents} eiro";
         }
     }
 }
