@@ -29,8 +29,6 @@ namespace VendingMachine
             Manufacturer = manufacturer;
             Amount = amount;
             Products = products;
-            Money _validCoins;
-
         }
 
         private Product[] _products = new Product[2];
