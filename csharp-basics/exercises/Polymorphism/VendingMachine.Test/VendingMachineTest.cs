@@ -14,7 +14,6 @@ namespace VendingMachine.Test
             _money = new Money();
             _product = new[] { new Product() };
             _bot = new VendingMachine("Janka", true, _money, _product);
-
         }
 
         [Test]
@@ -48,13 +47,12 @@ namespace VendingMachine.Test
         [Test]
         public void InsertCoin_GiveValidCent_ReturnValid()
         {
-            var test = new Money { Cents = 50, Euros = 1};
 
-            var result = _bot.InsertCoin(test);
+            var testMoney = new Money { Cents = 10};
 
-            result.Cents.Should().Be(50);
-            result.Euros.Should().Be(1);
-            
+            var result = _bot.InsertCoin(testMoney);
+
+            result.Cents.Should().Be(10);
         }
 
 

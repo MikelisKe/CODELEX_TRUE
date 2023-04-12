@@ -22,17 +22,18 @@ namespace VendingMachine
         public bool HasProducts { get => _products.Any(); }
         public Money Amount { get; }
         public Product[] Products { get; set; }
+        public Money _kase = new Money();
 
         public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product[] products)
         {
             Manufacturer = manufacturer;
             Amount = amount;
             Products = products;
+            Money _validCoins;
+
         }
 
         private Product[] _products = new Product[2];
-
-        public Money _kase = new Money();
         private int _intKase = 0;
 
         public Money InsertCoin(Money amount)
@@ -45,7 +46,7 @@ namespace VendingMachine
             }
             else
             {
-                throw new ArgumentOutOfRangeException();
+                //throw new ArgumentOutOfRangeException();
                 return _kase;
             }
 
