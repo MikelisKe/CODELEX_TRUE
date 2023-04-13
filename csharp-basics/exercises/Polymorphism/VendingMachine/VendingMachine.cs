@@ -6,8 +6,8 @@ namespace VendingMachine
 {
     public class VendingMachine : IVendingMachine
     {
-        public List<Money> _validCoins;
-        public VendingMachine()
+        private List<Money> _validCoins;
+        /*public VendingMachine()
         {
             _validCoins = new List<Money>
             {
@@ -17,18 +17,26 @@ namespace VendingMachine
                 new Money {Euros = 1},
                 new Money {Euros = 2}
             };
-        }
+        }*/
         public string Manufacturer { get; }
         public bool HasProducts { get => _products.Any(); }
         public Money Amount { get; }
         public Product[] Products { get; set; }
-        public Money _kase = new Money();
+        private Money _kase = new Money();
 
         public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product[] products)
         {
             Manufacturer = manufacturer;
             Amount = amount;
             Products = products;
+            _validCoins = new List<Money>
+            {
+                new Money {Cents = 10},
+                new Money {Cents = 20},
+                new Money {Cents = 50},
+                new Money {Euros = 1},
+                new Money {Euros = 2}
+            };
         }
 
         private Product[] _products = new Product[2];
@@ -80,8 +88,7 @@ namespace VendingMachine
         {
             if (productNumber < 0 && productNumber > 4)
             {
-                throw new ArgumentOutOfRangeException();
-                return false;
+                throw new IndexOutOfRangeException();
             }
 
             var product = _products[productNumber];
@@ -90,11 +97,9 @@ namespace VendingMachine
                 var nauda = (product.Price.Euros * 100 + product.Price.Cents);
                 _intKase -= nauda; //  1.5
 
-
-
                 _kase.Euros = (int)(_intKase/100);
                 _kase.Cents = (int)(_intKase % 100);
-                return true;
+                return true; 
             }
            
 

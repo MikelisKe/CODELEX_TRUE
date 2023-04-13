@@ -1,4 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\boriss\AppData\Local\Temp\JetBrains\ReSharperPlatformVs17\vAny_8b9de0e6\CoverageData\_Polymorphism.-2031956793\Snapshot\snapshot.utdcvr</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7481bef6_002Dd0d1_002D4244_002D8dfd_002D5bdf52f28c8f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="InsertCoin_GiveValidCent_ReturnValid #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::B8318491-FC41-44F0-BED3-40F838248D94::net7.0::VendingMachine.Test.Tests.InsertCoin_GiveValidCent_ReturnValid&lt;/TestId&gt;&#xD;
@@ -37,7 +38,7 @@
 &lt;/SessionState&gt;</s:String>
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7966c63_002Daa96_002D43ab_002Dadcd_002D5d86da69d4eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7966c63_002Daa96_002D43ab_002Dadcd_002D5d86da69d4eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e9965374_002De1d0_002D4b68_002D82d1_002D9b3e068b22c5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -45,8 +46,8 @@
     &lt;TestId&gt;NUnit3x::6B162428-E02C-421C-9F10-9072DB44F83E::net7.0::Persons.CatTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed7ef51a_002D0f18_002D484e_002D8d40_002D2277bd78aa1d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="InsertCoin_GiveValidCent_ReturnValid #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed7ef51a_002D0f18_002D484e_002D8d40_002D2277bd78aa1d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="InsertCoin_GiveValidCent_ReturnValid #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B8318491-FC41-44F0-BED3-40F838248D94::net7.0::VendingMachine.Test.Tests.InsertCoin_GiveValidCent_ReturnValid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B8318491-FC41-44F0-BED3-40F838248D94::net7.0::VendingMachine.Test.Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
