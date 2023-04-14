@@ -72,7 +72,6 @@ namespace VendingMachine
 
             if (String.IsNullOrWhiteSpace(name) || count < 0)
             {
-                throw new ArgumentOutOfRangeException();
                 return false;
             }
             
@@ -86,9 +85,9 @@ namespace VendingMachine
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            if (productNumber < 0 && productNumber > 4)
+            if (productNumber < 0 && productNumber > 3)
             {
-                throw new IndexOutOfRangeException();
+                return false;
             }
 
             var product = _products[productNumber];
@@ -105,7 +104,7 @@ namespace VendingMachine
 
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException();
+                return false;
             }
             else
             {
@@ -123,12 +122,8 @@ namespace VendingMachine
             }
             else
             {
-                throw new ArgumentOutOfRangeException();
+                return false;
             }
-
-            
-            
-            
 
             return true;
 

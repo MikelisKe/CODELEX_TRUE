@@ -20,7 +20,7 @@ namespace VendingMachine
             street.UpdateProduct(0, null,null, 9);
             street.UpdateProduct(1, "Beka",new Money{Cents = 90, Euros = 1}, 20);
 
-            street.UpdateProduct(4, "Beka", new Money { Cents = 90, Euros = 1 }, 20);
+            street.UpdateProduct(1, "Beka", new Money { Cents = 90, Euros = 1 }, -100);
 
 
             street.ReturnMoney();

@@ -1,6 +1,10 @@
 using FluentAssertions;
+using System.Diagnostics;
 using System.IO;
+using System.Xml.Linq;
 using VendingMachine;
+using static System.Formats.Asn1.AsnWriter;
+
 namespace VendingMachine.Test
 
 {
@@ -88,6 +92,21 @@ namespace VendingMachine.Test
         }
 
         [Test]
+        public void AddProduct_ValidInputs_EverythingIsGreat()
+        {
+            var result = _bot.AddProduct("test", new Money{Cents = 10, Euros = 1}, 15);
+            result.Should().BeTrue();
+            _bot.Products.Should().HaveCount(1);
+        }
+
+        [Test]
+        public void AddProduct_InvalidInputs_EverythingIsGreat()
+        {
+            var result = _bot.AddProduct("", new Money { Cents = 10, Euros = 1 }, -15);
+            result.Should().BeFalse();
+        }
+
+        [Test]
         public void ReturnMoney_GiveValidMoney_ReturnMoney()
         {
             var testMoney = new Money { Cents = 10, Euros = 1};
@@ -122,6 +141,23 @@ namespace VendingMachine.Test
             };
 
             act.Should().Throw<IndexOutOfRangeException>();
+        }
+
+        [Test]
+        public void UpdateProduct_InvalidAmount_ReturnsArgumentOutOfRangeException()
+        {
+           var result = _bot.UpdateProduct(1, "Beka", new Money { Cents = 10, Euros = 0 }, -100);
+            
+
+            result.Should().BeFalse();
+        }
+
+        [Test]
+        public void ToString_ValidToString()
+        {
+            var result = _bot.ToString();
+
+            _bot.ToString().Should().Be(result);
         }
     }
 }
