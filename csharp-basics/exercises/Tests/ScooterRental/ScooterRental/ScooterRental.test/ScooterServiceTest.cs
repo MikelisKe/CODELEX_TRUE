@@ -1,6 +1,8 @@
 using System.Runtime.CompilerServices;
 using FluentAssertions;
-using ScooterRental;
+using ScooterRental.Exceptions;
+using ScooterRental.Interfaces;
+
 namespace ScooterRental.test
 {
     public class ScooterServiceTest
@@ -121,6 +123,7 @@ namespace ScooterRental.test
 
             act.Should().Throw<ScooterNotFoundException>();
         }
+
 
 
 
