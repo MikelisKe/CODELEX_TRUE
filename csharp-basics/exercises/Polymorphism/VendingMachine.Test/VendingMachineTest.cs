@@ -53,7 +53,7 @@ namespace VendingMachine.Test
         public void InsertCoin_GiveValidCent_ReturnValidCents()
         {
 
-            var testMoney = new Money { Cents = 10};
+            var testMoney = new Money { Cents = 10 };
 
             var result = _bot.InsertCoin(testMoney);
 
@@ -64,7 +64,7 @@ namespace VendingMachine.Test
         public void InsertCoin_GiveValidEuros_ReturnValidEuros()
         {
 
-            var testMoney = new Money { Euros = 1};
+            var testMoney = new Money { Euros = 1 };
 
             var result = _bot.InsertCoin(testMoney);
 
@@ -94,7 +94,7 @@ namespace VendingMachine.Test
         [Test]
         public void AddProduct_ValidInputs_EverythingIsGreat()
         {
-            var result = _bot.AddProduct("test", new Money{Cents = 10, Euros = 1}, 15);
+            var result = _bot.AddProduct("test", new Money { Cents = 10, Euros = 1 }, 15);
             result.Should().BeTrue();
             _bot.Products.Should().HaveCount(1);
         }
@@ -109,12 +109,11 @@ namespace VendingMachine.Test
         [Test]
         public void ReturnMoney_GiveValidMoney_ReturnMoney()
         {
-            var testMoney = new Money { Cents = 10, Euros = 1};
+            var testMoney = new Money { Cents = 10, Euros = 1 };
 
             var result = _bot.ReturnMoney();
 
-            testMoney.Cents.Should().Be(10);
-            testMoney.Euros.Should().Be(1);
+            result.Should().Be(new Money());
         }
 
         [Test]
@@ -125,9 +124,10 @@ namespace VendingMachine.Test
             result.Should().Be(true);
         }
 
-        [Test] public void UpdateProduct_ValidUpdateToBuy_ReturnsTrue()
+        [Test]
+        public void UpdateProduct_ValidUpdateToBuy_ReturnsTrue()
         {
-            var result = _bot.UpdateProduct(1, " ", new Money { Cents = 10, Euros = 0 }, 20);
+            var result = _bot.UpdateProduct(1, null, null, 20);
 
             result.Should().Be(true);
         }
@@ -135,23 +135,27 @@ namespace VendingMachine.Test
         [Test]
         public void UpdateProduct_InvalidProductNumber_ReturnsFalse()
         {
-            Action act = () =>
-            {
-                _bot.UpdateProduct(4, "Beka", new Money { Cents = 10, Euros = 0 }, 20);
-            };
+            var result = _bot.UpdateProduct(-1, "Beka", new Money { Cents = 10, Euros = 0 }, 20);
 
-            act.Should().Throw<IndexOutOfRangeException>();
+            result.Should().BeFalse();
         }
 
         [Test]
         public void UpdateProduct_InvalidAmount_ReturnsArgumentOutOfRangeException()
         {
-           var result = _bot.UpdateProduct(1, "Beka", new Money { Cents = 10, Euros = 0 }, -100);
-            
+            var result = _bot.UpdateProduct(1, "Beka", new Money { Cents = 10, Euros = 0 }, -100);
+
 
             result.Should().BeFalse();
         }
 
+        [Test]
+        public void UpdateProduct_InvalidProductName_ReturnsFalse()
+        {
+            var result = _bot.UpdateProduct(1, null, new Money { Cents = 10, Euros = 0 }, 20);
+
+            result.Should().BeFalse();
+        }
         [Test]
         public void ToString_ValidToString()
         {

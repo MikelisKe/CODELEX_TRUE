@@ -7,17 +7,7 @@ namespace VendingMachine
     public class VendingMachine : IVendingMachine
     {
         private List<Money> _validCoins;
-        /*public VendingMachine()
-        {
-            _validCoins = new List<Money>
-            {
-                new Money {Cents = 10},
-                new Money {Cents = 20},
-                new Money {Cents = 50},
-                new Money {Euros = 1},
-                new Money {Euros = 2}
-            };
-        }*/
+       
         public string Manufacturer { get; }
         public bool HasProducts { get => _products.Any(); }
         public Money Amount { get; }
@@ -52,14 +42,11 @@ namespace VendingMachine
             }
             else
             {
-                //throw new ArgumentOutOfRangeException();
                 return _kase;
             }
 
             return _kase;
         }
-
-
 
         public Money ReturnMoney()
         {
@@ -85,7 +72,7 @@ namespace VendingMachine
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            if (productNumber < 0 && productNumber > 3)
+            if (productNumber < 0 || productNumber > 3)
             {
                 return false;
             }
@@ -131,7 +118,7 @@ namespace VendingMachine
 
         public override string ToString()
         {
-            return $"Izdotā nauda ir {_kase.Euros},{_kase.Cents} eiro";
+            return $"Izdotā nauda ir {_kase.Euros},{_kase.Cents} eiro! {Manufacturer}, {HasProducts}, {Amount} ";
         }
     }
 }
