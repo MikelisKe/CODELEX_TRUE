@@ -11,13 +11,13 @@ namespace ScooterRental
         public string Id { get; }
         public DateTime StartRent { get; }
         public DateTime? EndRent { get; set; }
-        public decimal PriceDecimal { get; }
+        public decimal RentPrice { get; }
 
-        public RentedScooter(string id, DateTime startRent, decimal price)
+        public RentedScooter(string id, DateTime startRent, decimal rentPrice)
         {
             Id = id;
             StartRent = startRent;
-            PriceDecimal  = price;
+            RentPrice  = rentPrice;
         }
 
     }

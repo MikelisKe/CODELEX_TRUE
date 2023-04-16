@@ -7,7 +7,7 @@ using ScooterRental.Interfaces;
 
 namespace ScooterRental
 {
-    internal class RentalArchive:IRentalArchive
+    internal class RentalArchive : IRentalArchive
     {
         private List<RentedScooter> _rentedScooterList;
 
@@ -17,7 +17,7 @@ namespace ScooterRental
         }
         public void AddRent(string id, decimal pricePerMinute, DateTime rentStart)
         {
-            _rentedScooterList.Add(new RentedScooter(id,rentStart,pricePerMinute));
+            _rentedScooterList.Add(new RentedScooter(id, rentStart, pricePerMinute));
         }
     }
 }

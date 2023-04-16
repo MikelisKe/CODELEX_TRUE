@@ -23,12 +23,12 @@ namespace ScooterRental.Interfaces
         /// List of scooters that belong to the company.
         /// </summary>
         /// <returns>Return a list of available scooters.</returns>
-        IList<Scooter> GetScooters();
+        IList<Scooter.Scooter> GetScooters();
         /// <summary>
         /// Get particular scooter by ID.
         /// </summary>
         /// <param name="scooterId">Unique ID of the scooter.</param>
         /// <returns>Return a particular scooter.</returns>
-        Scooter GetScooterById(string scooterId);
+        Scooter.Scooter GetScooterById(string scooterId);
     }
 }

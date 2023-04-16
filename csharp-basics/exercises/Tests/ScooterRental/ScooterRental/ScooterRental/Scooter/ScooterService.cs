@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ScooterRental.Exceptions;
 using ScooterRental.Interfaces;
+using ScooterRental.Scooter;
 
-namespace ScooterRental
+namespace ScooterRental.Scooter
 {
     public class ScooterService : IScooterService
     {
-        private readonly List<Scooter>  _scooters;
+        private readonly List<Scooter> _scooters;
 
         public ScooterService(List<Scooter> scooters)
         {
@@ -18,7 +19,7 @@ namespace ScooterRental
         }
         public void AddScooter(string id, decimal pricePerMinute)
         {
-            if (String.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(id))
             {
                 throw new ScooterIdThrowException();
             }
@@ -33,7 +34,7 @@ namespace ScooterRental
 
         public void RemoveScooter(string id)
         {
-            if (String.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(id))
             {
                 throw new ScooterIdThrowException();
             }
@@ -56,7 +57,7 @@ namespace ScooterRental
 
         public Scooter GetScooterById(string scooterId)
         {
-            if (String.IsNullOrEmpty(scooterId))
+            if (string.IsNullOrEmpty(scooterId))
             {
                 throw new ScooterIdThrowException();
             }

@@ -2,18 +2,19 @@ using System.Runtime.CompilerServices;
 using FluentAssertions;
 using ScooterRental.Exceptions;
 using ScooterRental.Interfaces;
+using ScooterRental.Scooter;
 
 namespace ScooterRental.test
 {
     public class ScooterServiceTest
     {
         private IScooterService _scooterService;
-        private List<Scooter> _scooters;
+        private List<Scooter.Scooter> _scooters;
 
         [SetUp]
         public void Setup()
         {
-            _scooters = new List<Scooter>();
+            _scooters = new List<Scooter.Scooter>();
             _scooterService = new ScooterService(_scooters);
         }
 
@@ -50,7 +51,7 @@ namespace ScooterRental.test
         [Test]
         public void RemoveScooter_ValidInfoProvided_ScooterGetsRemoved_()
         {
-            _scooters.Add(new Scooter("1",0.1m));
+            _scooters.Add(new Scooter.Scooter("1",0.1m));
             
             _scooterService.RemoveScooter("1");
 
@@ -84,7 +85,7 @@ namespace ScooterRental.test
         [Test]
         public void GetScooter_ReturnsAllScooters()
         {
-            _scooters.Add(new Scooter("1", 0.1m));
+            _scooters.Add(new Scooter.Scooter("1", 0.1m));
 
             var scooters = _scooterService.GetScooters();
             scooters.Count.Should().Be(1);
@@ -93,7 +94,7 @@ namespace ScooterRental.test
         [Test]
         public void GetScooterById_ReturnsValidScooter_ReturnsScooterSelectedById()
         {
-            var scooter = new Scooter("1", 1m);
+            var scooter = new Scooter.Scooter("1", 1m);
 
             _scooters.Add(scooter);
 

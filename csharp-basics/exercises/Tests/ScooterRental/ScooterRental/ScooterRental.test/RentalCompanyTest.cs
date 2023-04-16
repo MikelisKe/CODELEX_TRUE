@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using Moq.AutoMock;
 using ScooterRental.Interfaces;
+using ScooterRental.Scooter;
 
 namespace ScooterRental.test;
 
@@ -9,7 +10,7 @@ public class RentalCompanyTest
     private AutoMocker _mocker;
     private IRentalCompany _company;
     private const string CompanyName = "test";
-    private Scooter scooter = new Scooter("1", 0.00m);
+    private Scooter.Scooter scooter = new Scooter.Scooter("1", 0.00m);
 
     [SetUp]
     public void Setup()
