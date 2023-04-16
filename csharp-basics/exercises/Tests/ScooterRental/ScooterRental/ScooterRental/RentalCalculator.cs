@@ -8,5 +8,17 @@ namespace ScooterRental
 {
     internal class RentalCalculator
     {
+        /*need DateTime Startrent
+         *need DateTime EndRent
+         * Need RentPrice
+         */
+        
+
+        public RentalCalculator()
+        {
+
+        }
+
+        public void CalculateFee(RentedScooter )
     }
 }
