@@ -78,10 +78,10 @@ namespace VendingMachine
             }
 
             var product = _products[productNumber];
-            if (name == null && !price.HasValue )   //notiek pirkšana
+            if (name == null && !price.HasValue )
             {
                 var nauda = (product.Price.Euros * 100 + product.Price.Cents);
-                _intKase -= nauda; //  1.5
+                _intKase -= nauda;
 
                 _kase.Euros = (int)(_intKase/100);
                 _kase.Cents = (int)(_intKase % 100);

@@ -28,6 +28,7 @@ namespace Persons
 
             _foodEaten += food._quantity;
         }
+
         public override string ToString()
         {
             return $"{this.GetType().Name} {_animalName} {_animalWeight}";
