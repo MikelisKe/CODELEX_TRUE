@@ -10,5 +10,6 @@
     &lt;TestId&gt;NUnit3x::6A37ABF4-2DB8-4EE2-A49E-11598C7B249B::net7.0::ScooterRental.test.ScooterServiceTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6A37ABF4-2DB8-4EE2-A49E-11598C7B249B::net7.0::ScooterRental.test.RentalCompanyTest.StartRent_ScooterIsRented_ReturnsTrue&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::6A37ABF4-2DB8-4EE2-A49E-11598C7B249B::net7.0::ScooterRental.test.RentalCompanyTest.StartRent_ScooterRentHasEnded_ReturnsFalse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6A37ABF4-2DB8-4EE2-A49E-11598C7B249B::net7.0::ScooterRental.test.RentalCompanyTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
