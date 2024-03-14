@@ -35,7 +35,7 @@ namespace CalculateArea
                     CalculateTriangleArea();
                     return keyboard.KeyChar.ToString();
                 default: 
-                    return "invalid output";
+                    return "You exited the program";
             }
         }
 

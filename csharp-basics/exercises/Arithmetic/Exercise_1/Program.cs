@@ -2,15 +2,20 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Input two integers to solve the mistery:"); 
-        int num = int.Parse(Console.ReadLine());
-        int devider = 15;
-        if (num == devider|| num % devider ==0)
+        Console.WriteLine("Input two integers to solve the mistery:");
+        int devider = int.Parse(Console.ReadLine());
+        if (devider == 15)
         {
-            Console.WriteLine(true);
+            Console.WriteLine("The number you wrote is 15");
         }
-                
-        
+        else if (devider % 15 == 0)
+        {
+            Console.WriteLine("The number you wrote is divisible by 15");
+        }
+        else
+        {
+            Console.WriteLine("The number is shit");
+        }
         Console.ReadKey();
     }
 }
