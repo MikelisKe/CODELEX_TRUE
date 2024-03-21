@@ -2,9 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Please input your weight");
+        Console.WriteLine("Please input your weight in kilograms(kg)");
         int weight = int.Parse(Console.ReadLine());
-        Console.WriteLine("now height");
+        Console.WriteLine("now height in centimeters (cm)");
         double height = double.Parse(Console.ReadLine());
         double bmi = weight/ (height*height);
 

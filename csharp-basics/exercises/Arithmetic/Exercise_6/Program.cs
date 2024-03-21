@@ -1,13 +1,14 @@
 ﻿internal class Program
 {
-        private static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        const int max = 110;
-        CozaLozaWoza();
-        static void CozaLozaWoza()
+        Console.WriteLine("Insert the number co create CozaLozaWoza");
+        int max = Convert.ToInt32(Console.ReadLine());
+        CozaLozaWoza(max);
+        static void CozaLozaWoza(int max)
         {
-            for(var i =1; i< max; i++)
-            {                
+            for (var i = 1; i < max; i++)
+            {
                 if (i % 11 == 0)
                 {
                     Console.WriteLine();
@@ -15,8 +16,8 @@
                 else if (i % 105 == 0)
                 {
                     Console.Write("CozaLozaWoza ");
-                }                             
-                else if (i % 15 == 0 )
+                }
+                else if (i % 15 == 0)
                 {
                     Console.Write("CozaLoza ");
                 }
@@ -42,9 +43,9 @@
                 }
                 else
                 {
-                    Console.Write(i+ " ");
+                    Console.Write(i + " ");
                 }
-            }                       
+            }
         }
     }
 }

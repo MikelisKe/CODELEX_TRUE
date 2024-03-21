@@ -1,7 +1,7 @@
 ﻿internal class Program
 {
     private static void Main(string[] args)
-    {
+    {        
         double dollars1 = 7.50;
         double dollars2 = 8.20;
         double dollars3 = 10.00;
@@ -17,7 +17,7 @@
         {
             if (basePay < 8.00 || hoursWorked > 60)
             {
-                return "error";
+                return "The base pay must be at least $8.00 and the hours worked must be less than 60 hours per week.";
             }
 
             if (hoursWorked <= 40)
