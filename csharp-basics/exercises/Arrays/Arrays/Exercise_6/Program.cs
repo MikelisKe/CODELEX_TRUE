@@ -15,7 +15,7 @@
             Console.Write(arrayOfTen[i] + " ");
         }
 
-        Console.WriteLine( "\n");
+        Console.WriteLine("\n");
         int[] copyOfArray = arrayOfTen;
         copyOfArray[9] = -7;
 
@@ -25,5 +25,5 @@
         }
 
         Console.ReadKey();
-        }
+    }
 }
