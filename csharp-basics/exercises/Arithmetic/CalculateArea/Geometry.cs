@@ -23,7 +23,7 @@ namespace CalculateArea
         public static double AreaOfTriangle(decimal ground, decimal h)
         {
             double areaTri = (double)(ground * h) * (double)0.5;
-            return areaTri ;
+            return areaTri;
         }
     }
 }
