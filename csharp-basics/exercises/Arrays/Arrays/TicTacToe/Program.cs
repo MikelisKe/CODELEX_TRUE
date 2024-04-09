@@ -12,7 +12,7 @@ namespace TicTacToe
             InitBoard();            
             string playTurn = "O";
             int counter = 0;
-
+            DisplayBoard();
             while (counter < 9)
             {
 
