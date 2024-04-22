@@ -9,14 +9,14 @@ internal class Program
         Product product2 = new Product("iPhone 5s", 999.99, 3);
         Product product3 = new Product("Epson EB-U05", 440.46, 1);
         
-        Console.WriteLine(product1.PrintProduct());
-        Console.WriteLine(product2.PrintProduct());
-        Console.WriteLine(product3.PrintProduct());
+        Console.WriteLine(product1.ToString());
+        Console.WriteLine(product2.ToString());
+        Console.WriteLine(product3.ToString());
 
         Console.WriteLine(product3.ChangePrice());
         Console.WriteLine(product3.ChangeQuantitity());
         
-        Console.WriteLine(product3.PrintProduct());
+        Console.WriteLine(product3.ToString());
 
         Console.ReadKey();
     }
