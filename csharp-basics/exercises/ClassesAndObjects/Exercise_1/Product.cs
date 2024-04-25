@@ -32,15 +32,16 @@ namespace Exercise_1
         {
             Console.WriteLine("Whats the ammount of product, you want to add");
             string input = Console.ReadLine();
-            double intParse = double.Parse(input);  
-            return _ammount += q;
+            int intParse = int.Parse(input);
+            return _ammount += intParse;
         }
-    public double ChangePrice()
-    {
-        Console.WriteLine("Whats the new price?");
-        double p = double.Parse();
-        return _price = p;
+        public double ChangePrice()
+        {
+            Console.WriteLine("Whats the new price?");
+            string input = Console.ReadLine();
+            double intParse = double.Parse(input);
+            return _price += intParse;
+        }
     }
-}
 }
 

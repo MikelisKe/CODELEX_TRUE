@@ -19,6 +19,6 @@ internal class Program
         
         Console.WriteLine(product3.ToString());
 
-        Console.ReadKey();
+        Console.ReadKey();    
     }
 }
